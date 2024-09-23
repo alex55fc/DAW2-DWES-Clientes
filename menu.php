@@ -14,7 +14,7 @@
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link d-flex align-items-center gap-2" href="usuarios/usuarios.php">
+              <a class="nav-link d-flex align-items-center gap-2" href="usuarios.php">
                 <svg class="bi"><use xlink:href="#graph-up"/></svg>
                 Usuarios
               </a>
@@ -74,7 +74,7 @@
                 <svg class="bi"><use xlink:href="#door-closed"/></svg>
                 Sign out
               </a>
-            </li>
+            </li> 
           </ul>
         </div>
       </div>
