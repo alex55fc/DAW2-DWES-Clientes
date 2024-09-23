@@ -4,6 +4,7 @@ $user="root";
 $password="";
 $database="ifc303";
 
+//$mysqli es la variable que usaremos a lo largo de toda la web cuando llamamemos al conector de la DB
 $mysqli= new mysqli($host, $user, $password, $database);
 
 if(mysqli_connect_errno()){

@@ -20,6 +20,12 @@
               </a>
             </li>
           <li class="nav-item">
+              <a class="nav-link d-flex align-items-center gap-2" href="productos.php">
+                <svg class="bi"><use xlink:href="#graph-up"/></svg>
+                Productos
+              </a>
+            </li>
+          <li class="nav-item">
               <a class="nav-link d-flex align-items-center gap-2" href="mi%20dashboard/midashboard.php">
                 <svg class="bi"><use xlink:href="#graph-up"/></svg>
                 Mi dashboard
