@@ -69,12 +69,14 @@
                 Settings
               </a>
             </li>
+<!-- modificado para el salir de la sesion-->
             <li class="nav-item">
-              <a class="nav-link d-flex align-items-center gap-2" href="#">
+              <a class="nav-link d-flex align-items-center gap-2" href="login_salir.php">
                 <svg class="bi"><use xlink:href="#door-closed"/></svg>
                 Sign out
               </a>
-            </li> 
+            </li>
+              
           </ul>
         </div>
       </div>

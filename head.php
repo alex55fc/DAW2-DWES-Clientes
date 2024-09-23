@@ -1,3 +1,10 @@
+<!--Para el ejercicio del login-->
+<?php 
+    session_start();
+    if((!isset($_SESSION["valido"])) and ($_SESSION["valido"]!="1")){
+        header("location:login.php");
+    }
+?>
 <head><script src="js/color-modes.js"></script>
 
 <meta charset="utf-8">
@@ -20,6 +27,7 @@
 <link rel="icon" href="/docs/5.3/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
 <link rel="manifest" href="/docs/5.3/assets/img/favicons/manifest.json">
 <link rel="mask-icon" href="/docs/5.3/assets/img/favicons/safari-pinned-tab.svg" color="#712cf9">
+<link rel="icon" href="/docs/5.3/assets/img/favicons/ons/safari-pinned-tab.svg" color="#712cf9">
 <link rel="icon" href="/docs/5.3/assets/img/favicons/favicon.ico">
 <meta name="theme-color" content="#712cf9">
 
