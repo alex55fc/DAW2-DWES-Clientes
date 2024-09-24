@@ -54,7 +54,7 @@
               <td><?php echo $fila["stock"];?></td>
             <!-- boton para editar cada una de las filas, mandara el valor que esta en la fila seleccionada por Id-->
               <td>
-                  <a href="pagina no existente.php?id=<?php echo $fila["id"];?>"><i class="fa-solid fa-pen-to-square"></i></a>
+                  <a href="productos_edit.php?id=<?php echo $fila["id"];?>"><i class="fa-solid fa-pen-to-square"></i></a>
                   <a href="pagina no existente.php?id=<?php echo $fila["id"];?>"><i class="fa-solid fa-trash"></i></a>
                   <a href="imprimir_producto.php?id=<?php echo $fila["id"];?>"><i class="fa-solid fa-print"></i></a>
 
