@@ -14,7 +14,7 @@
     <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
       <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
         <h1 class="h2">Usuarios</h1>
-        <a href="clientes_new.php" class="btn btn-primary">Nuevo usuario</a>
+        <a href="usuarios_new.php" class="btn btn-primary">Nuevo usuario</a>
       </div>  
         
         <!--Conexion a la DB-->
@@ -54,7 +54,7 @@
               <td><?php echo $fila["email"];?></td>
             <!-- boton para editar cada una de las filas, mandara el valor que esta en la fila seleccionada por Id-->
               <td><a href="usuarios_edit.php?id=<?php echo $fila["id"];?>">Editar</a></td>  
-              <td><a href="clientes_delete.php.php?id=<?php echo $fila["id"];?>"><i class="fa-solid fa-trash"></i></a></td>  
+              <td><a href="aaa?id=<?php echo $fila["id"];?>"><i class="fa-solid fa-trash"></i></a></td>  
 
 
             </tr>
