@@ -26,13 +26,19 @@
               </a>
             </li>
           <li class="nav-item">
+              <a class="nav-link d-flex align-items-center gap-2" href="proveedores.php">
+                <svg class="bi"><use xlink:href="#graph-up"/></svg>
+                Proveedores
+              </a>
+            </li>
+            <li class="nav-item">
               <a class="nav-link d-flex align-items-center gap-2" href="mi%20dashboard/midashboard.php">
                 <svg class="bi"><use xlink:href="#graph-up"/></svg>
                 Mi dashboard
               </a>
             </li>
           </ul>
-
+            
           <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-body-secondary text-uppercase">
             <span>Saved reports</span>
             <a class="link-secondary" href="#" aria-label="Add a new report">
