@@ -54,7 +54,7 @@
               <td><?php echo $fila["email"];?></td>
             <!-- boton para editar cada una de las filas, mandara el valor que esta en la fila seleccionada por Id-->
               <td><a href="usuarios_edit.php?id=<?php echo $fila["id"];?>">Editar</a></td>  
-              <td><a href="aaa?id=<?php echo $fila["id"];?>"><i class="fa-solid fa-trash"></i></a></td>  
+              <td><a href="usuarios_delete.php?id=<?php echo $fila["id"];?>"><i class="fa-solid fa-trash"></i></a></td>  
 
 
             </tr>
