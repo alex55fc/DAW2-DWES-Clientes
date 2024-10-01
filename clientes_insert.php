@@ -14,6 +14,7 @@ $sql.=",'".date("Y-m-d h:i:s")."'";
 $sql.=",'".date("Y-m-d h:i:s")."'";
 $sql.=")";
 
-$mysqli->query($sql);
-header("location:clientes.php");
+if($mysqli->query($sql)) echo $mysqli->insert_id;
+else echo 0;
+//esto lo comentamos ya que usamos el ajax header("location:clientes.php");
 ?>
