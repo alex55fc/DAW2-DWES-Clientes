@@ -32,6 +32,12 @@
               </a>
             </li>
             <li class="nav-item">
+              <a class="nav-link d-flex align-items-center gap-2" href="direcciones_proveedores.php">
+                <svg class="bi"><use xlink:href="#graph-up"/></svg>
+                Direcciones proveeodores
+              </a>
+            </li>
+            <li class="nav-item">
               <a class="nav-link d-flex align-items-center gap-2" href="mi%20dashboard/midashboard.php">
                 <svg class="bi"><use xlink:href="#graph-up"/></svg>
                 Mi dashboard
