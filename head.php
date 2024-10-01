@@ -116,4 +116,8 @@
 <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.min.css" rel="stylesheet">
 <!-- Custom styles for this template -->
 <link href="dashboard.css" rel="stylesheet">
+<script src="js/jquery-3.7.1.js"></script>
+<!-- Custom styles for alerts 'SweetAlert2'-->
+<script src="node_modules/sweetalert2/dist/sweetalert2.all.min.js"></script>
+<link rel="stylesheet" href="node_modules/sweetalert2/dist/sweetalert2.min.css">
 </head>

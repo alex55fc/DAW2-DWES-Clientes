@@ -25,6 +25,7 @@
 <link rel="mask-icon" href="/docs/5.3/assets/img/favicons/safari-pinned-tab.svg" color="#712cf9">
 <link rel="icon" href="/docs/5.3/assets/img/favicons/favicon.ico">
 <meta name="theme-color" content="#712cf9">
+<script src="js/jquery-3.7.1.js"></script>
 
 
     <style>
@@ -166,16 +167,23 @@
 <main class="form-signin w-100 m-auto">
     
  <!-- Apartir de aqui modificamos el login-->
-    <form action="login_verificar.php" method="post" enctype="multipart/form-data">
+ <!-- añadimos un id para usar el JQUERY correctamente al FORM-->
+    <form action="login_verificar.php" method="post" enctype="multipart/form-data" id="form1">
       
     <img class="mb-4" src="/docs/5.3/assets/brand/bootstrap-logo.svg" alt="" width="72" height="57">
     <h1 class="h3 mb-3 fw-normal">Please sign in</h1>
 
+    <!--Aqui ponemos lo del errorV-->
+    <span id="errorV" class="text-danger"></span>
+        
+        
     <div class="form-floating">
+      <span id="username_error" class="text-danger"></span>
       <input type="text" class="form-control" id="username" placeholder="usuario" name="username">
       <label for="floatingInput">Email address</label>
     </div>
     <div class="form-floating">
+      <span id="pass_error" class="text-danger"></span>
       <input type="password" class="form-control" id="pass" placeholder="pass" name="pass">
       <label for="floatingPassword">Password</label>
     </div>
@@ -187,11 +195,102 @@
       </label>
     </div>
 -->        
-    <button class="btn btn-primary w-100 py-2" type="submit">Sign in</button>
+<!-- Nueva parte con JQUERY -->
+    <button class="btn btn-primary w-100 py-2" type="button" id="btnValidar">Sign in</button>
     <p class="mt-5 mb-3 text-body-secondary">&copy; 2017–2024</p>
   </form>
 </main>
+<style>
+    .borderError{
+        border: 1px solid #ff0000;
+    }
+</style>
 <script src="bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js" ></script>
+      <script>
+            $( document ).ready(function() {
+                
+                //------------------------------------------------------------------------------------------------------------
+                $("#btnValidar").click(function (){
+                       let username=$("#username").val();
+                       let pass=$("#pass").val();
+                       let error= 0;
+                    if(username == ""){
+                            error=1;
+                            $("#username_error").html("Debe introducir un nombre de usuario");
+                            $("#username").addClass("borderError");
 
+                        }
+                    if(pass== ""){
+                        error=1;
+                        $("#pass_error").html("Debe introducir una contraseña");
+                        $("#pass").addClass("borderError");
+                    }
+                    //en vez de hacer un refresco de pantalla decidimos usar un ajax en vez de un submit
+                    if(error== 0){
+                        //$("#form1").submit();
+                        $.ajax({
+                           data:{username,pass:pass},
+                            method:"POST",
+                            url: "login_verificar.php",
+                            success: function(result){
+                                if(result == 0){
+                                    $("#errorV").html("Usuario o contrasenia incorrectos")
+                                }
+                                else{
+                                    location.href="index.php";
+                                }
+                            }
+                        });
+                    }
+                            
+                   });
+                //------------------------------------------------------------------------------------------------------------
+
+                /*  $("#username").change(function(){
+                      alert("The text has been changed.");
+                    });
+                */
+                //------------------------------------------------------------------------------------------------------------
+                  $("#username").change(function(){
+                        var value = $(this).val().length;
+                      if(value>0){
+                        $("#username_error").html("");
+                        $("#username").removeClass("borderError");
+                    }else{
+                        $("#username_error").html("Debe introducir un nombre de usuario");
+                        $("#username").addClass("borderError");
+                  }
+                                                                                  
+                  })
+                //------------------------------------------------------------------------------------------------------------
+                  $("#username").on('keyup', function(){
+                        var value = $(this).val().length;
+                      if(value>0){
+                        $("#username_error").html("");
+                        $("#username").removeClass("borderError");
+                    }else{
+                        $("#username_error").html("Debe introducir un nombre de usuario");
+                        $("#username").addClass("borderError");
+                  }
+                                                                                  
+                  })
+                
+                  $("#pass").on('keyup', function(){
+                        var value = $(this).val().length;
+                      if(value>0){
+                        $("#pass_error").html("");
+                        $("#pass").removeClass("borderError");
+                    }else{
+                        $("#pass_error").html("Debe introducir una contraseña de usuario");
+                        $("#pass").addClass("borderError");
+                    }
+                                                                                  
+                  })
+                //------------------------------------------------------------------------------------------------------------
+
+                
+            });
+          
+      </script>
     </body>
 </html>

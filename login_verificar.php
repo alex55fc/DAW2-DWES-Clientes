@@ -20,10 +20,13 @@ if($query->num_rows>0){
     $_SESSION["apellidos"]= $fila["apellidos"];
     $_SESSION["email"]= $fila["email"];
     $_SESSION["valido"]= "1";
-    header("location:index.php");
+    //header("location:index.php");
+    echo 1;
 }else{
     //usuario no reconocido
-    header("location:login.php");
+    //header("location:login.php");
+    //este echo nos devuelve al ajax que es correcta la informacion
+    echo 0;
 }
 
 ?>
