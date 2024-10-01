@@ -5,6 +5,7 @@ $id=$_GET["id"];
 include("db.php");
 $sql="DELETE FROM `clientes` WHERE `id` ='".$id."'";
 
-$mysqli->query($sql);
-header("location:clientes.php");
+if($mysqli->query($sql))echo 1;
+else echo 0;
+//header("location:clientes.php");
 ?>
