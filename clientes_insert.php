@@ -14,6 +14,8 @@ $sql.=",'".date("Y-m-d h:i:s")."'";
 $sql.=",'".date("Y-m-d h:i:s")."'";
 $sql.=")";
 
+/*insert_id devuelve el ultimo id INSERTADO, lo usamos para asi al tener el el cliente insertado listo para usarlo en clientes.php
+*/
 if($mysqli->query($sql)) echo $mysqli->insert_id;
 else echo 0;
 //esto lo comentamos ya que usamos el ajax header("location:clientes.php");
